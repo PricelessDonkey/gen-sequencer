@@ -1,0 +1,35 @@
+.finger-paint-regular {
+    font-family: "Finger Paint", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 667px;
+    height: 375px;
+}
+
+.toolbar {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar-left {
+    width: 30%;
+    transform: rotate(-5deg); /* Rotate text by -2 degrees */
+}
+
+.toolbar-right {
+    width: 70%;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.controls-container {
+    height: 90%;
+}
