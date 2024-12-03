@@ -2,23 +2,18 @@
     font-family: "Finger Paint", serif;
     font-weight: 400;
     font-style: normal;
+    color: orange;
 }
 
 .container {
-    width: 667px;
-    height: 375px;
-}
-
-.toolbar {
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100vw;
+    height: 110vh;
 }
 
 .toolbar-left {
     width: 30%;
     transform: rotate(-5deg); /* Rotate text by -2 degrees */
+    padding: 6px;
 }
 
 .toolbar-right {
@@ -28,8 +23,73 @@
 .tabs {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
 }
 
 .controls-container {
-    height: 90%;
+    border: orange 2px solid;
+    width: 95vw;
+    height: 80%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
+button {
+    display: inline-flex; /* Center the content */
+    align-items: center;
+    justify-content: center;
+    width: 15px; /* Equal width and height */
+    height: 15px;
+    background-color: #f56a79; /* Button color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 1.5em; /* Text or icon size */
+    color: white; /* Text or icon color */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth effects */
+  }
+  
+  button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: #e63950; /* Change color on hover */
+  }
+  
+  .active {
+    transform: scale(1.1); /* Slightly shrink on click */
+    background-color: #d12d42; /* Darker color for active state */
+  }
+
+  html {
+    height: 100vh; /* Ensures scrolling works with address bar toggling */
+  }
+  
+  body {
+    margin: 0; /* Remove default margin */
+    height: 100%;
+  }
+  
+  .toolbar {
+    position: fixed; /* Always visible at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Toolbar height */
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .content {
+    margin-top: 50px; /* Avoid overlap with the toolbar */
+    height: calc(100% - 50px); /* Fill remaining space */
+    width: 100vw;
+    background: #f4f4f4;
+    position: fixed;
+  }
+  
+  

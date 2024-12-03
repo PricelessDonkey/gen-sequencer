@@ -5,17 +5,17 @@
     </div>
     <div class="toolbar-right">
       <div class="tabs">
-        <button (click)="toggleSection('A')">A</button>
-        <button (click)="toggleSection('B')">B</button>
-        <button (click)="toggleSection('C')">C</button>
-        <button (click)="toggleSection('D')">D</button>
-        <button (click)="toggleSection('E')">E</button>
+        <button class="icon-tab" [class.active]="activeSection === 'A'" (click)="toggleSection('A')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'B'" (click)="toggleSection('B')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'C'" (click)="toggleSection('C')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'D'" (click)="toggleSection('D')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'E'" (click)="toggleSection('E')"></button>
       </div>
     </div>
   </div>
-  <div class="controls-container">
+  <div class="content">
     <div *ngIf="activeSection === 'A'">
-      <h3>A Section</h3>
+      <h3 class="finger-paint-regular"> yup </h3>
     </div>
     <div *ngIf="activeSection === 'B'">
       <h3>B Section</h3>
