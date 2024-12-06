@@ -5,18 +5,39 @@
     </div>
     <div class="toolbar-right">
       <div class="tabs">
-        <button class="icon-tab" [class.active]="activeSection === 'A'" (click)="toggleSection('A')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'B'" (click)="toggleSection('B')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'C'" (click)="toggleSection('C')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'D'" (click)="toggleSection('D')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'E'" (click)="toggleSection('E')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'A'" (mousedown)="toggleSection('A')"> H </button>
+        <button class="icon-tab" [class.active]="activeSection === 'B'" (mousedown)="toggleSection('B')"> E </button>
+        <button class="icon-tab" [class.active]="activeSection === 'C'" (mousedown)="toggleSection('C')"> L </button>
+        <button class="icon-tab" [class.active]="activeSection === 'D'" (mousedown)="toggleSection('D')"> L </button>
+        <button class="icon-tab" [class.active]="activeSection === 'E'" (mousedown)="toggleSection('E')"> O </button>
       </div>
     </div>
   </div>
   <div class="content">
-    <div *ngIf="activeSection === 'A'">
-      <h3 class="finger-paint-regular"> yup </h3>
-    </div>
+    <ng-container *ngIf="activeSection === 'A'">
+      <div class="content-left">
+        <div class="slider-container">
+          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Randomness" />
+          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Randomness" />
+        </div>
+        <div class="slider-container">
+          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Randomness" />
+          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Randomness" />
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="step-container">
+          <button class="step" *ngFor="let step of seq1; let i = index"
+          [ngClass]="{'active-step': i === seq1CurrentStep, 'selected-step': step.selected}"
+          (mousedown)="step.selected = !(step.selected)"></button>
+        </div>
+        <div class="step-container">
+          <button class="step" *ngFor="let step of seq2; let i = index"
+          [ngClass]="{'active-step': i === seq2CurrentStep, 'selected-step': step.selected}"
+          (mousedown)="step.selected = !(step.selected)"></button>
+        </div>
+      </div>
+    </ng-container>
     <div *ngIf="activeSection === 'B'">
       <h3>B Section</h3>
     </div>
@@ -31,5 +52,3 @@
     </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>

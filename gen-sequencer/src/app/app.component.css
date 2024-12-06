@@ -1,95 +1,171 @@
 .finger-paint-regular {
-    font-family: "Finger Paint", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: orange;
+  font-family: "Finger Paint", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #366c8e;
 }
 
 .container {
-    width: 100vw;
-    height: 110vh;
+  width: 100vw;
+  height: 110vh;
 }
 
 .toolbar-left {
-    width: 30%;
-    transform: rotate(-5deg); /* Rotate text by -2 degrees */
-    padding: 6px;
+  width: 30%;
+  transform: rotate(-5deg);
+  /* Rotate text by -2 degrees */
+  padding: 6px;
 }
 
 .toolbar-right {
-    width: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  height: 100%;
+  margin-right: 10px;
 }
 
 .tabs {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* Align buttons to the bottom */
+  padding: 0;
+  margin: 0;
+  height: auto;
+  /* Allow it to naturally fill available space */
 }
 
-.controls-container {
-    border: orange 2px solid;
-    width: 95vw;
-    height: 80%;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+.icon-tab {
+  display: inline-flex;
+  /* Center the content */
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  /* Equal width and height */
+  height: 40px;
+  background-color: #366c8e;
+  /* Button color */
+  border: none;
+  /* Remove default border */
+  border-radius: 10px 10px 0 0;
+  color: white;
+  /* Text or icon color */
+  cursor: pointer;
+  /* Pointer cursor for interactivity */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  /* Smooth effects */
+  line-height: 1;
+  /* Ensure no extra spacing */
+  vertical-align: bottom;
+  /* Align to the bottom */
+  margin-bottom: 0;
+  /* Remove any margin */
+  margin-right: 3px;
+  padding: 0;
+  /* Remove internal padding */
 }
 
-button {
-    display: inline-flex; /* Center the content */
-    align-items: center;
-    justify-content: center;
-    width: 15px; /* Equal width and height */
-    height: 15px;
-    background-color: #f56a79; /* Button color */
-    border: none; /* Remove default border */
-    border-radius: 50%; /* Make it a circle */
-    font-size: 1.5em; /* Text or icon size */
-    color: white; /* Text or icon color */
-    cursor: pointer; /* Pointer cursor for interactivity */
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth effects */
-  }
-  
-  button:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    background-color: #e63950; /* Change color on hover */
-  }
-  
-  .active {
-    transform: scale(1.1); /* Slightly shrink on click */
-    background-color: #d12d42; /* Darker color for active state */
-  }
 
-  html {
-    height: 100vh; /* Ensures scrolling works with address bar toggling */
-  }
-  
-  body {
-    margin: 0; /* Remove default margin */
-    height: 100%;
-  }
-  
-  .toolbar {
-    position: fixed; /* Always visible at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Toolbar height */
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .content {
-    margin-top: 50px; /* Avoid overlap with the toolbar */
-    height: calc(100% - 50px); /* Fill remaining space */
-    width: 100vw;
-    background: #f4f4f4;
-    position: fixed;
-  }
-  
-  
+button:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+  color: #e63950;
+  /* Change color on hover */
+  background-color: white;
+}
+
+.active {
+  transform: scale(1.1);
+  /* Slightly shrink on click */
+  color: #d12d42;
+  /* Darker color for active state */
+  background-color: white;
+}
+
+html {
+  height: 100vh;
+  /* Ensures scrolling works with address bar toggling */
+}
+
+body {
+  margin: 0;
+  /* Remove default margin */
+  height: 100%;
+}
+
+.toolbar {
+  position: fixed;
+  /* Always visible at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /* Toolbar height */
+  background-color: #e2e7dc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  margin-top: 50px;
+  /* Avoid overlap with the toolbar */
+  height: calc(100% - 50px);
+  /* Fill remaining space */
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-right {
+  margin: 10px;
+}
+
+.content-left {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-left div {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  accent-color: #366c8e;
+}
+
+.step {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: #366c8e solid 1px;
+}
+
+.active-step {
+  margin-bottom: 5px;
+  border: #e2e7dc solid 2px;
+}
+
+.selected-step {
+  background-color: #366c8e;
+  border: #366c8e solid 1px;
+}
+
+.step-container {
+  margin-bottom: 10px;
+}
+
+.slider-container {
+  margin-bottom: 10px;
+  height: 42px;
+}
