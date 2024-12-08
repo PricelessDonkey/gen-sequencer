@@ -5,6 +5,14 @@
   color: #366c8e;
 }
 
+.playwrite-regular {
+  font-family: "Playwrite HR Lijeva", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #366c8e;
+}
+
 .container {
   width: 100vw;
   height: 110vh;
@@ -12,8 +20,7 @@
 
 .toolbar-left {
   width: 30%;
-  transform: rotate(-5deg);
-  /* Rotate text by -2 degrees */
+  transform: rotate(-2deg);
   padding: 6px;
 }
 
@@ -163,9 +170,32 @@ body {
 
 .step-container {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .slider-container {
   margin-bottom: 10px;
   height: 42px;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Rotate the content if in portrait mode */
+@media screen and (orientation: portrait) {
+  .container {
+    transform: rotate(90deg); /* Rotate content */
+    transform-origin: center center; /* Set the pivot point for rotation */
+    width: 100vh; /* Adjust width to viewport height */
+    height: 100vw; /* Adjust height to viewport width */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
 }

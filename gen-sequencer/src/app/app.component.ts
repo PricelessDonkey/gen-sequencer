@@ -43,7 +43,8 @@ export class AppComponent {
     { id: 7 },
   ];
 
-  toggleSection(section: string) {
+  toggleSection(event: Event, section: string) {
+    event.preventDefault();
     this.activeSection = section;
   }
 }

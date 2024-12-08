@@ -1,15 +1,15 @@
 <div class="container">
   <div class="toolbar">
     <div class="toolbar-left">
-      <h2 class="finger-paint-regular">Pomelo Brunn</h2>
+      <h2 class="playwrite-regular">Pomelo</h2>
     </div>
     <div class="toolbar-right">
       <div class="tabs">
-        <button class="icon-tab" [class.active]="activeSection === 'A'" (mousedown)="toggleSection('A')"> H </button>
-        <button class="icon-tab" [class.active]="activeSection === 'B'" (mousedown)="toggleSection('B')"> E </button>
-        <button class="icon-tab" [class.active]="activeSection === 'C'" (mousedown)="toggleSection('C')"> L </button>
-        <button class="icon-tab" [class.active]="activeSection === 'D'" (mousedown)="toggleSection('D')"> L </button>
-        <button class="icon-tab" [class.active]="activeSection === 'E'" (mousedown)="toggleSection('E')"> O </button>
+        <button class="icon-tab" [class.active]="activeSection === 'A'" (touchstart)="toggleSection($event, 'A')" (click)="toggleSection($event, 'A')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'B'" (touchstart)="toggleSection($event, 'B')" (click)="toggleSection($event, 'B')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'C'" (touchstart)="toggleSection($event, 'C')" (click)="toggleSection($event, 'C')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'D'" (touchstart)="toggleSection($event, 'D')" (click)="toggleSection($event, 'D')"></button>
+        <button class="icon-tab" [class.active]="activeSection === 'E'" (touchstart)="toggleSection($event, 'E')" (click)="toggleSection($event, 'E')"></button>
       </div>
     </div>
   </div>
