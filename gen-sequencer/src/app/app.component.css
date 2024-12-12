@@ -14,7 +14,7 @@
 }
 
 .container {
-  width: 100vw;
+  width: 95vw;
   height: 110vh;
 }
 
@@ -122,23 +122,26 @@ body {
   margin-top: 50px;
   /* Avoid overlap with the toolbar */
   height: calc(100% - 50px);
-  /* Fill remaining space */
-  width: 100vw;
   position: fixed;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .content-right {
-  margin: 10px;
+  margin-top: 10px;
+  width: 325px;
 }
 
 .content-left {
-  margin: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 330px;
 }
 
 .content-left div {
@@ -185,17 +188,31 @@ body {
   overflow: hidden; /* Prevent scrolling */
 }
 
-/* Rotate the content if in portrait mode */
 @media screen and (orientation: portrait) {
-  .container {
-    transform: rotate(90deg); /* Rotate content */
-    transform-origin: center center; /* Set the pivot point for rotation */
-    width: 100vh; /* Adjust width to viewport height */
-    height: 100vw; /* Adjust height to viewport width */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: 50% 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 91vw;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 92vw;
+  }
+
+  .content-left {
+    width: 320px;
+  }
+
+  .content-right {
+    width: 320px;
+    margin-left: 10px;
   }
 }
