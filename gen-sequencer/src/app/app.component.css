@@ -176,6 +176,10 @@ body {
   width: 40px;
   height: 40px;
   border: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .active-step {
@@ -237,3 +241,13 @@ body {
     margin-left: 10px;
   }
 }
+
+button:focus {
+  outline: none;
+  box-shadow: none; /* Remove any default box-shadow or outline */
+}
+
+button:active {
+  background-color: inherit; /* Keeps the background consistent */
+}
+
