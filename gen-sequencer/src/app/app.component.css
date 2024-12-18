@@ -165,6 +165,7 @@ body {
 
 .control-menu-button {
  color: #366c8e;
+ background-color: transparent;
  border-radius: 50%;
  border: none;
  margin-right: 3px;
