@@ -4,13 +4,14 @@
       <h2 class="playwrite-regular">Pomelo</h2>
     </div>
     <div class="toolbar-right">
-      <div class="tabs">
-        <button class="icon-tab" [class.active]="activeSection === 'A'" (touchstart)="toggleSection($event, 'A')" (click)="toggleSection($event, 'A')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'B'" (touchstart)="toggleSection($event, 'B')" (click)="toggleSection($event, 'B')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'C'" (touchstart)="toggleSection($event, 'C')" (click)="toggleSection($event, 'C')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'D'" (touchstart)="toggleSection($event, 'D')" (click)="toggleSection($event, 'D')"></button>
-        <button class="icon-tab" [class.active]="activeSection === 'E'" (touchstart)="toggleSection($event, 'E')" (click)="toggleSection($event, 'E')"></button>
-      </div>
+      <button *ngIf="!isPlaying" class="play-stop-button" (touchstart)="togglePlaying($event)"
+      (click)="togglePlaying($event)"> <span class="material-symbols-outlined">
+        play_arrow
+        </span></button>
+        <button *ngIf="isPlaying" class="play-stop-button" (touchstart)="togglePlaying($event)"
+        (click)="togglePlaying($event)"> <span class="material-symbols-outlined">
+          stop
+          </span></button>
     </div>
   </div>
   <div class="content">
@@ -25,30 +26,32 @@
           <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Randomness" />
         </div>
       </div>
-      <div class="content-right">
-        <div class="step-container">
-          <button class="step" *ngFor="let step of seq1; let i = index"
-          [ngClass]="{'active-step': i === seq1CurrentStep, 'selected-step': step.selected}"
-          (mousedown)="step.selected = !(step.selected)"></button>
-        </div>
-        <div class="step-container">
-          <button class="step" *ngFor="let step of seq2; let i = index"
-          [ngClass]="{'active-step': i === seq2CurrentStep, 'selected-step': step.selected}"
-          (mousedown)="step.selected = !(step.selected)"></button>
-        </div>
-      </div>
     </ng-container>
-    <div *ngIf="activeSection === 'B'">
+    <ng-container *ngIf="activeSection === 'B'">
       <h3>B Section</h3>
+    </ng-container>
+    <div class="content-right">
+      <div class="step-container">
+        <button class="control-menu-button" (touchstart)="toggleSection($event, 'A')"
+        (click)="toggleSection($event, 'A')"> <span class="material-symbols-outlined">
+            tune
+          </span></button>
+        <button class="step" *ngFor="let step of seq1; let i = index"
+          [ngClass]="{'active-step': i === seq1CurrentStep, 'selected-step': step.selected}"
+          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
+      </div>
+      <div class="step-container">
+        <button class="control-menu-button" (touchstart)="toggleSection($event, 'B')"
+        (click)="toggleSection($event, 'B')"> <span class="material-symbols-outlined">
+          tune
+        </span></button>
+        <button class="step" *ngFor="let step of seq2; let i = index"
+          [ngClass]="{'active-step': i === seq2CurrentStep, 'selected-step': step.selected}"
+          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
+      </div>
     </div>
-    <div *ngIf="activeSection === 'C'">
-      <h3>C Section</h3>
-    </div>
-    <div *ngIf="activeSection === 'D'">
-      <h3>D Section</h3>
-    </div>
-    <div *ngIf="activeSection === 'E'">
-      <h3>E Section</h3>
-    </div>
+    <ng-container *ngIf="activeSection === 'A'">
+
+    </ng-container>
   </div>
 </div>

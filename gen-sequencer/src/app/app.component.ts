@@ -17,6 +17,7 @@ type Step = {
 })
 export class AppComponent {
   title = 'gen-sequencer';
+  isPlaying = false;
   activeSection: string = 'A'; // Tracks the active section
   seq1Randomness = 0;
   seq1CurrentStep: number | undefined;
@@ -46,5 +47,15 @@ export class AppComponent {
   toggleSection(event: Event, section: string) {
     event.preventDefault();
     this.activeSection = section;
+  }
+
+  toggleStep(event: Event, step: Step) {
+    event.preventDefault();
+    step.selected = !(step.selected);
+  }
+
+  togglePlaying(event: Event) {
+    event.preventDefault();
+    this.isPlaying = !this.isPlaying;
   }
 }
