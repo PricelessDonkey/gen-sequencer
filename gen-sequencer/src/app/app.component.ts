@@ -19,7 +19,15 @@ export class AppComponent {
   title = 'gen-sequencer';
   isPlaying = false;
   activeSection: string = 'A'; // Tracks the active section
-  seq1Randomness = 0;
+  seq1Value1 = 0;
+  seq1Value2 = 0;
+  seq1Value3 = 0;
+  seq1Value4 = 0;
+  seq1Value5 = 0;
+  seq1Value6 = 0;
+  seq1Value7 = 0;
+  seq1Value8 = 0;
+
   seq1CurrentStep: number | undefined;
   seq1: Step[] = [
     { id: 0 },
@@ -31,9 +39,35 @@ export class AppComponent {
     { id: 6 },
     { id: 7 },
   ];
-  seq2Randomness = 0;
+  seq2Value1 = 0;
+  seq2Value2 = 0;
+  seq2Value3 = 0;
+  seq2Value4 = 0;
+  seq2Value5 = 0;
+  seq2Value6 = 0;
+  seq2Value7 = 0;
+  seq2Value8 = 0;
   seq2CurrentStep: number | undefined;
   seq2: Step[] = [
+    { id: 0 },
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+    { id: 7 },
+  ];
+  seq3Value1 = 0;
+  seq3Value2 = 0;
+  seq3Value3 = 0;
+  seq3Value4 = 0;
+  seq3Value5 = 0;
+  seq3Value6 = 0;
+  seq3Value7 = 0;
+  seq3Value8 = 0;
+  seq3CurrentStep: number | undefined;
+  seq3: Step[] = [
     { id: 0 },
     { id: 1 },
     { id: 2 },

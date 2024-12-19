@@ -155,6 +155,18 @@ body {
   accent-color: #366c8e;
 }
 
+.seq1 .slider {
+  accent-color: #366c8e;
+}
+
+.seq2 .slider {
+  accent-color: #39774f;
+}
+
+.seq3 .slider {
+  accent-color: #de6433;
+}
+
 .step {
   border-radius: 50%;
   width: 40px;
@@ -192,10 +204,27 @@ body {
   border: #366c8e solid 1px;
 }
 
+.selected-stepA {
+  background-color: #366c8e;
+  border: #366c8e solid 1px;
+}
+
+.selected-stepB {
+  background-color: #39774f;
+  border: #39774f solid 1px;
+}
+
+.selected-stepC {
+  background-color: #de6433;
+  border: #de6433 solid 1px;
+}
+
 .step-container {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
+  padding: 2px;
+  box-sizing: border-box;
 }
 
 .slider-container {
@@ -226,7 +255,7 @@ body {
 @media screen and (orientation: landscape) {
   .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 92vw;
@@ -249,5 +278,12 @@ button:focus {
 
 button:active {
   background-color: inherit; /* Keeps the background consistent */
+}
+
+.selected-sequence {
+  border: 1px solid #cad8cd;
+  background-color: #cad8cd 10%;
+  padding: 2px;
+  border-radius: 10px;
 }
 
