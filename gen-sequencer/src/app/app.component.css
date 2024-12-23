@@ -110,6 +110,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 700px;
   height: 50px;
   /* Toolbar height */
   background-color: #e2e7dc;
@@ -130,6 +131,7 @@ body {
   justify-content: space-evenly;
   margin-left: 10px;
   margin-right: 10px;
+  max-width: 680px;
 }
 
 .content-right {
@@ -151,25 +153,10 @@ body {
   align-items: center;
 }
 
-.slider {
-  accent-color: #366c8e;
-}
-
-.seq1 .slider {
-  accent-color: #366c8e;
-}
-
-.seq2 .slider {
-  accent-color: #39774f;
-}
-
-.seq3 .slider {
-  accent-color: #de6433;
-}
-
 .step {
   border-radius: 50%;
   width: 40px;
+  min-width: 40px;
   height: 40px;
   border: none;
   /* border: #366c8e solid 1px; */
@@ -225,6 +212,7 @@ body {
   flex-direction: row;
   padding: 2px;
   box-sizing: border-box;
+  width: fit-content;
 }
 
 .slider-container {
@@ -234,12 +222,19 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 /* Base styles */
 body {
   margin: 0;
   overflow: hidden; /* Prevent scrolling */
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers the container horizontally */
+  align-items: center; /* Centers the container vertically */
+  justify-self: center;
+  min-height: 100vh; /* Makes the body fill the entire viewport height */
+  margin: 0; /* Removes default body margins */
 }
 
 @media screen and (orientation: portrait) {
@@ -249,6 +244,11 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 91vw;
+  }
+
+  .content-right {
+    margin-left: -25px;
+    margin-right: 0px;
   }
 }
 
@@ -262,12 +262,13 @@ body {
   }
 
   .content-left {
-    width: 320px;
+    width: 400px;
+    margin-right: -20px;
   }
 
   .content-right {
-    width: 320px;
-    margin-left: 10px;
+    margin-left: -10px;
+    margin-right: 0px;
   }
 }
 
@@ -286,4 +287,69 @@ button:active {
   padding: 2px;
   border-radius: 10px;
 }
+
+/* General styling for the range slider */
+input[type="range"] {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 100%; /* Adjust width as needed */
+  height: 10px; /* Adjust track height */
+  background: #e2e7dc; /* Adjust track color */
+  border-radius: 5px; /* Rounded track */
+  outline: none; /* Remove focus outline */
+}
+
+/* Track styling for WebKit browsers (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px; /* Adjust track height */
+  background: #e2e7dc; /* Track color */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+/* Thumb styling for WebKit browsers */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 40px; /* Adjust thumb width */
+  height: 40px; /* Adjust thumb height */
+  border-radius: 50%; /* Circular thumb */
+  cursor: pointer;
+  position: relative;
+  top: -15px; /* Adjust for Firefox */
+}
+
+.slider {
+  accent-color: #366c8e;
+}
+
+.seq1 .slider {
+  accent-color: #366c8e;
+}
+
+.seq2 .slider {
+  accent-color: #39774f;
+}
+
+.seq3 .slider {
+  accent-color: #de6433;
+}
+
+.seq1 input[type="range"]::-webkit-slider-thumb {
+  padding-bottom: 15px;
+  background: #366c8e; /* Thumb color */
+}
+
+.seq2 input[type="range"]::-webkit-slider-thumb {
+  background: #39774f; /* Thumb color */
+}
+
+.seq3 input[type="range"]::-webkit-slider-thumb {
+  background: #de6433; /* Thumb color */
+}
+
+/* Hover effect for thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #0056b3; /* Change thumb color on hover */
+}
+
 
