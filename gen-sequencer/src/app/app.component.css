@@ -14,7 +14,7 @@
 }
 
 .container {
-  width: 95vw;
+  width: 93vw;
   height: 110vh;
 }
 
@@ -167,7 +167,7 @@ body {
  background-color: transparent;
  border-radius: 50%;
  border: none;
- margin-right: 3px;
+ margin-right: 1px;
 }
 
 .play-stop-button {
