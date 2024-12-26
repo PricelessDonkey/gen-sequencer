@@ -27,6 +27,8 @@ export class AppComponent {
   seq1Value6 = 0;
   seq1Value7 = 0;
   seq1Value8 = 0;
+  seq1Value9 = 0;
+  seq1Value10 = 0;
 
   seq1CurrentStep: number | undefined;
   seq1: Step[] = [
@@ -47,6 +49,8 @@ export class AppComponent {
   seq2Value6 = 0;
   seq2Value7 = 0;
   seq2Value8 = 0;
+  seq2Value9 = 0;
+  seq2Value10 = 0;
   seq2CurrentStep: number | undefined;
   seq2: Step[] = [
     { id: 0 },
@@ -66,6 +70,8 @@ export class AppComponent {
   seq3Value6 = 0;
   seq3Value7 = 0;
   seq3Value8 = 0;
+  seq3Value9 = 0;
+  seq3Value10 = 0;
   seq3CurrentStep: number | undefined;
   seq3: Step[] = [
     { id: 0 },
@@ -86,6 +92,8 @@ export class AppComponent {
   seq4Value6 = 0;
   seq4Value7 = 0;
   seq4Value8 = 0;
+  seq4Value9 = 0;
+  seq4Value10 = 0;
   seq4CurrentStep: number | undefined;
   seq4: Step[] = [
     { id: 0 },
