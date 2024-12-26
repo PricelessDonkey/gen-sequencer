@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { StateService } from '../state.service';
 import { Step } from '../types';
+import { StepsComponent } from "../steps/steps.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, StepsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -18,8 +18,7 @@ export class AppComponent {
   
   constructor(public state: StateService) {}
   
-  toggleSection(event: Event, section: string) {
-    event.preventDefault();
+  toggleSection(section: string) {
     this.activeSection = section;
   }
 

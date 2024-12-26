@@ -6,6 +6,7 @@ import { Sequencer, Step } from './types';
 })
 export class StateService {
   sequencer1: Sequencer = {
+    color: '#366c8e',
     value1: 0,
     value2: 0,
     value3: 0,
@@ -29,6 +30,7 @@ export class StateService {
     ]
   }
   sequencer2: Sequencer = {
+    color: '#39774f',
     value1: 0,
     value2: 0,
     value3: 0,
@@ -52,6 +54,7 @@ export class StateService {
     ]
   }
   sequencer3: Sequencer = {
+    color: '#de6433',
     value1: 0,
     value2: 0,
     value3: 0,
@@ -75,6 +78,7 @@ export class StateService {
     ]
   }
   sequencer4: Sequencer = {
+    color: '#7facc6',
     value1: 0,
     value2: 0,
     value3: 0,
@@ -97,6 +101,7 @@ export class StateService {
       { id: 7 },
     ]
   }
+  activeSection: string = 'A';
 
   constructor() { }
 }

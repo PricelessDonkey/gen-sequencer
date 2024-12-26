@@ -112,42 +112,10 @@
       </div>
     </ng-container>
     <div class="content-right">
-      <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'A'}">
-        <button class="control-menu-button" (touchstart)="toggleSection($event, 'A')"
-        (click)="toggleSection($event, 'A')"> <span class="material-symbols-outlined">
-            tune
-          </span></button>
-        <button class="step" *ngFor="let step of state.sequencer1.sequence; let i = index"
-          [ngClass]="{'active-step': i === state.sequencer1.currentStep}"
-          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
-      </div>
-      <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'B'}">
-        <button class="control-menu-button" (touchstart)="toggleSection($event, 'B')"
-        (click)="toggleSection($event, 'B')"> <span class="material-symbols-outlined">
-          tune
-        </span></button>
-        <button class="step" *ngFor="let step of state.sequencer2.sequence; let i = index"
-          [ngClass]="{'active-step': i === state.sequencer2.currentStep}"
-          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
-      </div>
-      <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'C'}">
-        <button class="control-menu-button" (touchstart)="toggleSection($event, 'C')"
-        (click)="toggleSection($event, 'C')"> <span class="material-symbols-outlined">
-            tune
-          </span></button>
-        <button class="step" *ngFor="let step of state.sequencer3.sequence; let i = index"
-          [ngClass]="{'active-step': i === state.sequencer3.currentStep}"
-          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
-      </div>
-      <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'D'}">
-        <button class="control-menu-button" (touchstart)="toggleSection($event, 'D')"
-        (click)="toggleSection($event, 'D')"> <span class="material-symbols-outlined">
-            tune
-          </span></button>
-        <button class="step" *ngFor="let step of state.sequencer4.sequence; let i = index"
-          [ngClass]="{'active-step': i === state.sequencer4.currentStep}"
-          (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
-      </div>
+      <app-steps [sequencer]="state.sequencer1" section="A" [activeSection]="activeSection" (controlsClicked)="toggleSection('A')"></app-steps>
+      <app-steps [sequencer]="state.sequencer2" section="B" [activeSection]="activeSection" (controlsClicked)="toggleSection('B')"></app-steps>
+      <app-steps [sequencer]="state.sequencer3" section="C" [activeSection]="activeSection" (controlsClicked)="toggleSection('C')"></app-steps>
+      <app-steps [sequencer]="state.sequencer4" section="D" [activeSection]="activeSection" (controlsClicked)="toggleSection('D')"></app-steps>
     </div>
   </div>
 </div>

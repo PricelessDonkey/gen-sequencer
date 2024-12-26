@@ -1,0 +1,42 @@
+.step-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+.step {
+    border-radius: 50%;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.selected-sequence {
+    border: 1px solid #cad8cd;
+    background-color: #cad8cd 10%;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.control-menu-button {
+    color: #366c8e;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1px;
+}
+
+
+.active-step {
+    margin-bottom: 5px;
+    border: #e2e7dc solid 2px;
+}
+
+.selected-step {
+    background-color: #366c8e;
+    border: #366c8e solid 1px;
+}

@@ -1,0 +1,11 @@
+<div class="step-container" [ngClass]="{'selected-sequence': activeSection === section}">
+    <button class="control-menu-button" (touchstart)="toggleSection($event)"
+        (click)="toggleSection($event)"> <span class="material-symbols-outlined">
+            tune
+        </span></button>
+    <button class="step" *ngFor="let step of sequencer.sequence; let i = index"
+        [ngClass]="{'active-step': i === sequencer.currentStep}"
+        [ngStyle]="{ 'background-color': step.selected ? sequencer.color : '#e2e7dc' }"
+        (click)="toggleStep($event, step)"
+        (touchstart)="toggleStep($event, step)"></button>
+</div>

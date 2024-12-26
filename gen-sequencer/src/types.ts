@@ -5,6 +5,7 @@ export type Step = {
 }
 
 export type Sequencer = {
+    color: string;
     value1: number;
     value2: number;
     value3: number;
@@ -16,6 +17,6 @@ export type Sequencer = {
     value9: number;
     value10: number;
     currentStep?: number; // Optional and can be undefined or a number
-    sequence: { id: number }[];
+    sequence: Step[];
   };
   
