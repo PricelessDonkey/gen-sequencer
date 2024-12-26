@@ -78,6 +78,26 @@ export class AppComponent {
     { id: 7 },
   ];
 
+  seq4Value1 = 0;
+  seq4Value2 = 0;
+  seq4Value3 = 0;
+  seq4Value4 = 0;
+  seq4Value5 = 0;
+  seq4Value6 = 0;
+  seq4Value7 = 0;
+  seq4Value8 = 0;
+  seq4CurrentStep: number | undefined;
+  seq4: Step[] = [
+    { id: 0 },
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+    { id: 7 },
+  ];
+
   toggleSection(event: Event, section: string) {
     event.preventDefault();
     this.activeSection = section;

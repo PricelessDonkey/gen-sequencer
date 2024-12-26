@@ -82,7 +82,6 @@ button:hover {
   /* Slightly enlarge on hover */
   color: #e63950;
   /* Change color on hover */
-  background-color: white;
 }
 
 .active {
@@ -90,7 +89,6 @@ button:hover {
   /* Slightly shrink on click */
   color: #d12d42;
   /* Darker color for active state */
-  background-color: white;
 }
 
 html {
@@ -206,11 +204,16 @@ body {
   border: #de6433 solid 1px;
 }
 
+.selected-stepD {
+  background-color: #7facc6;
+  border: #7facc6 solid 1px;
+}
+
 .step-container {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
-  padding: 2px;
+  padding: 1px;
   box-sizing: border-box;
   width: fit-content;
 }
@@ -334,6 +337,10 @@ input[type="range"]::-webkit-slider-thumb {
   accent-color: #de6433;
 }
 
+.seq4 .slider {
+  accent-color: #7facc6;
+}
+
 .seq1 input[type="range"]::-webkit-slider-thumb {
   padding-bottom: 15px;
   background: #366c8e; /* Thumb color */
@@ -345,6 +352,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .seq3 input[type="range"]::-webkit-slider-thumb {
   background: #de6433; /* Thumb color */
+}
+
+.seq4 input[type="range"]::-webkit-slider-thumb {
+  background: #7facc6; /* Thumb color */
 }
 
 /* Hover effect for thumb */
