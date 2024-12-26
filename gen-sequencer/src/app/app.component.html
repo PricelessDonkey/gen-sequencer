@@ -18,96 +18,96 @@
     <ng-container *ngIf="activeSection === 'A'">
       <div class="content-left seq1">
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value1" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value2"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value1" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value2"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value3" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value4"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value3" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value4"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value5" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value6"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value5" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value6"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value7" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value8"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value7" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value8"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value9" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq1Value10"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value9" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer1.value10"/>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="activeSection === 'B'">
       <div class="content-left seq2">
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value1" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value2"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value1" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value2"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value3" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value4"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value3" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value4"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value5" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value6"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value5" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value6"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value7" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value8"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value7" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value8"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value9" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq2Value10"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value9" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer2.value10"/>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="activeSection === 'C'">
       <div class="content-left seq3">
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value1" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value2"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value1" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value2"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value3" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value4"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value3" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value4"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value5" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value6"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value5" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value6"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value7" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value8"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value7" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value8"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value9" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq3Value10"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value9" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer3.value10"/>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="activeSection === 'D'">
       <div class="content-left seq4">
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value1" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value2"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value1" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value2"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value3" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value4"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value3" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value4"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value5" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value6"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value5" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value6"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value7" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value8"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value7" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value8"/>
         </div>
         <div class="slider-container">
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value9" />
-          <input class="slider" id="blend" type="range" min="0" max="1" step="0.01" [(ngModel)]="seq4Value10"/>
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value9" />
+          <input class="slider" type="range" min="0" max="1" step="0.01" [(ngModel)]="state.sequencer4.value10"/>
         </div>
       </div>
     </ng-container>
@@ -117,8 +117,8 @@
         (click)="toggleSection($event, 'A')"> <span class="material-symbols-outlined">
             tune
           </span></button>
-        <button class="step" *ngFor="let step of seq1; let i = index"
-          [ngClass]="{'active-step': i === seq1CurrentStep, 'selected-stepA': step.selected}"
+        <button class="step" *ngFor="let step of state.sequencer1.sequence; let i = index"
+          [ngClass]="{'active-step': i === state.sequencer1.currentStep}"
           (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
       </div>
       <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'B'}">
@@ -126,8 +126,8 @@
         (click)="toggleSection($event, 'B')"> <span class="material-symbols-outlined">
           tune
         </span></button>
-        <button class="step" *ngFor="let step of seq2; let i = index"
-          [ngClass]="{'active-step': i === seq2CurrentStep, 'selected-stepB': step.selected}"
+        <button class="step" *ngFor="let step of state.sequencer2.sequence; let i = index"
+          [ngClass]="{'active-step': i === state.sequencer2.currentStep}"
           (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
       </div>
       <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'C'}">
@@ -135,8 +135,8 @@
         (click)="toggleSection($event, 'C')"> <span class="material-symbols-outlined">
             tune
           </span></button>
-        <button class="step" *ngFor="let step of seq3; let i = index"
-          [ngClass]="{'active-step': i === seq3CurrentStep, 'selected-stepC': step.selected}"
+        <button class="step" *ngFor="let step of state.sequencer3.sequence; let i = index"
+          [ngClass]="{'active-step': i === state.sequencer3.currentStep}"
           (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
       </div>
       <div class="step-container" [ngClass]="{'selected-sequence': activeSection === 'D'}">
@@ -144,8 +144,8 @@
         (click)="toggleSection($event, 'D')"> <span class="material-symbols-outlined">
             tune
           </span></button>
-        <button class="step" *ngFor="let step of seq4; let i = index"
-          [ngClass]="{'active-step': i === seq4CurrentStep, 'selected-stepD': step.selected}"
+        <button class="step" *ngFor="let step of state.sequencer4.sequence; let i = index"
+          [ngClass]="{'active-step': i === state.sequencer4.currentStep}"
           (click)="toggleStep($event, step)" (touchstart)="toggleStep($event, step)"></button>
       </div>
     </div>
