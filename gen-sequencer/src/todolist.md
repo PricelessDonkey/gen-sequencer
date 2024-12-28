@@ -5,8 +5,9 @@
 [] - delete unused css/html
 [] - change control button color to match sequences
 [x] - start adding sounds
-[] - add sequences to instruments
+[] - add sequences to steps component
 [] - add settings to instruments
+[] - add 2 lfos to each instrument, add ability to control settings with LFO. slider says which setting it controls
 [] - add master controls (solo, volumes, overall effects)
 [] - add effects to instruments
 [] - add buffer / granular synth for 'clouds'. basically take a 1 bar section and loop it with granular synthesis
