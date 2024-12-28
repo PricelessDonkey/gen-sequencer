@@ -112,7 +112,7 @@
       </div>
     </ng-container>
     <div class="content-right">
-      <app-steps [sequencer]="state.sequencer1" section="A" [activeSection]="activeSection" (controlsClicked)="toggleSection('A')"></app-steps>
+      <app-steps [sequencer]="state.sequencer1" [synth]="fmSynth.instrument" section="A" [activeSection]="activeSection" (controlsClicked)="toggleSection('A')"></app-steps>
       <app-steps [sequencer]="state.sequencer2" section="B" [activeSection]="activeSection" (controlsClicked)="toggleSection('B')"></app-steps>
       <app-steps [sequencer]="state.sequencer3" section="C" [activeSection]="activeSection" (controlsClicked)="toggleSection('C')"></app-steps>
       <app-steps [sequencer]="state.sequencer4" section="D" [activeSection]="activeSection" (controlsClicked)="toggleSection('D')"></app-steps>

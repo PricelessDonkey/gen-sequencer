@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { StateService } from '../state.service';
 import { Step } from '../types';
 import { StepsComponent } from "../steps/steps.component";
+import { FmSynthService } from './fm-synth.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   isPlaying = false;
   activeSection: string = 'A';
   
-  constructor(public state: StateService) {}
+  constructor(public state: StateService, public fmSynth: FmSynthService) {}
   
   toggleSection(section: string) {
     this.activeSection = section;
