@@ -7,13 +7,15 @@ import * as Tone from 'tone';
 export class FmSynthService {
   public instrument: Tone.FMSynth;
 
-  constructor() {
-    this.instrument = new Tone.FMSynth({
-      envelope: {
-        release: '4n',
-        decay: '4n',     
-      }
-    }).toDestination();
+   initializeSynth() {
+    if (!this.instrument) {
+      this.instrument = new Tone.FMSynth({
+        envelope: {
+          release: '4n',
+          decay: '4n',     
+        }
+      }).toDestination();
+    }
    }
 
    updateSetting(setting: string, value: number) {

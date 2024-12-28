@@ -40,7 +40,13 @@ export class AppComponent {
     this.isPlaying = !this.isPlaying;
 
     if (this.isPlaying) {
-      await Tone.start();
+      await this.initializeTone();
     }
+  }
+
+  private async initializeTone() {
+    await Tone.start();
+
+    this.fmSynth.initializeSynth();
   }
 }
