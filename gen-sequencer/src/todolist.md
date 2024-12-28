@@ -4,7 +4,7 @@
 [] - refactor state service into separate instrument services
 [] - delete unused css/html
 [] - change control button color to match sequences
-[] - start adding sounds
+[x] - start adding sounds
 [] - add sequences to instruments
 [] - add settings to instruments
 [] - add master controls (solo, volumes, overall effects)

@@ -5,6 +5,7 @@ import { StateService } from '../state.service';
 import { Step } from '../types';
 import { StepsComponent } from "../steps/steps.component";
 import { FmSynthService } from './fm-synth.service';
+import * as Tone from "tone";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,9 @@ export class AppComponent {
   isPlaying = false;
   activeSection: string = 'A';
   
-  constructor(public state: StateService, public fmSynth: FmSynthService) {}
+  constructor(public state: StateService, public fmSynth: FmSynthService) {
+
+  }
   
   toggleSection(section: string) {
     this.activeSection = section;
@@ -28,8 +31,16 @@ export class AppComponent {
     step.selected = !(step.selected);
   }
 
-  togglePlaying(event: Event) {
+  onFmSynthSettingsChange(setting: string, value: number) {
+    this.fmSynth.updateSetting(setting, value);
+  }
+
+  async togglePlaying(event: Event) {
     event.preventDefault();
     this.isPlaying = !this.isPlaying;
+
+    if (this.isPlaying) {
+      await Tone.start();
+    }
   }
 }

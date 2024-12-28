@@ -23,6 +23,7 @@ export class FmSynthService {
       }
     });
 
-    console.log(`settings: ${JSON.stringify(this.instrument.envelope)}`)
+    const newSetting = this.instrument.envelope.attack;
+    console.log(`new setting: ${newSetting}`)
   }
 }
