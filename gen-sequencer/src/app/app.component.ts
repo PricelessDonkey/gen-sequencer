@@ -41,6 +41,8 @@ export class AppComponent {
 
     if (this.isPlaying) {
       await this.initializeTone();
+    } else {
+      Tone.getTransport().stop();
     }
   }
 
