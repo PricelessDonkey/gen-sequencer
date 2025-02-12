@@ -31,11 +31,6 @@ export class AppComponent {
     step.selected = !(step.selected);
   }
 
-  onFmSynthSettingsChange(setting: string, value: number) {
-    this.fmSynth.updateSetting(setting, value);
-    this.fmSynth.instrument.envelope.attack;
-  }
-
   async togglePlaying(event: Event) {
     event.preventDefault();
     this.isPlaying = !this.isPlaying;

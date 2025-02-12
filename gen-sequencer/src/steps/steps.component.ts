@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Sequencer, Step } from '../types';
 import { StateService } from '../state.service';
-import { Instrument } from 'tone/build/esm/instrument/Instrument';
+import { Instrument, InstrumentOptions } from 'tone/build/esm/instrument/Instrument';
+import { FMSynthOptions } from 'tone';
 
 @Component({
   selector: 'app-steps',
@@ -14,14 +15,14 @@ export class StepsComponent {
   @Input() sequencer: Sequencer;
   @Input() section: string;
   @Input() activeSection: string;
-  @Input() synth: Instrument<any>;
+  @Input() synth: Instrument<FMSynthOptions>;
   @Output() controlsClicked = new EventEmitter<string>();
 
   constructor(public state: StateService) {}
 
   toggleStep(event: Event, step: Step) {
     event.preventDefault();
-    step.selected = !(step.selected);
+    step.selected = !(step.selected); debugger;
     this.synth.triggerAttackRelease('C4', '4n');
   }
 
