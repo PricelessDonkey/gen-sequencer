@@ -33,6 +33,7 @@ export class AppComponent {
 
   onFmSynthSettingsChange(setting: string, value: number) {
     this.fmSynth.updateSetting(setting, value);
+    this.fmSynth.instrument.envelope.attack;
   }
 
   async togglePlaying(event: Event) {
