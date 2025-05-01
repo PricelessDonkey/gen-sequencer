@@ -1,4 +1,7 @@
-<div class="container">
+<div class="landing-page" *ngIf="!initialized">
+  <button id="initialize-button" class="playwrite-regular" (click)="initializeTone()"> Get Started </button>
+</div>
+<div *ngIf="initialized" class="container">
   <div class="toolbar">
     <div class="toolbar-left">
       <h2 class="playwrite-regular">Pomélo</h2>
@@ -7,7 +10,7 @@
       <button *ngIf="!isPlaying" class="play-stop-button" (touchstart)="togglePlaying($event)"
       (click)="togglePlaying($event)"> <span class="material-symbols-outlined">
         play_arrow
-        </span></button>
+        </span></button> 
         <button *ngIf="isPlaying" class="play-stop-button" (touchstart)="togglePlaying($event)"
         (click)="togglePlaying($event)"> <span class="material-symbols-outlined">
           stop

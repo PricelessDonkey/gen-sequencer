@@ -1,16 +1,13 @@
 import { Injectable } from '@angular/core';
 import * as Tone from 'tone';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class FmSynthService {
   public instrument: Tone.FMSynth;
   public reverb: Tone.Reverb;
   public vibrato: Tone.Vibrato;
 
   constructor() {
-    this.initializeSynth();
+    // this.initializeSynth();
   }
 
   initializeSynth() {

@@ -17,8 +17,10 @@ export class AppComponent {
   title = 'gen-sequencer';
   isPlaying = false;
   activeSection: string = 'A';
+  initialized = false;
+  fmSynth: FmSynthService;
   
-  constructor(public state: StateService, public fmSynth: FmSynthService) {
+  constructor(public state: StateService) {
 
   }
   
@@ -36,15 +38,18 @@ export class AppComponent {
     this.isPlaying = !this.isPlaying;
 
     if (this.isPlaying) {
-      await this.initializeTone();
+      // await this.initializeTone();
     } else {
       Tone.getTransport().stop();
     }
   }
 
-  private async initializeTone() {
+  async initializeTone() {
     await Tone.start();
 
+    this.fmSynth = new FmSynthService();
     this.fmSynth.initializeSynth();
+
+    this.initialized = true;
   }
 }
